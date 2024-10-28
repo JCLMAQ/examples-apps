@@ -2,7 +2,14 @@
   "name": "@examples-apps/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start be:dev": "nx serve nestjs",
+    "start fe:dev": "nx serve jcm-app",
+    "pnpm-instal": "pnpm install --no-frozen-lockfile",
+    "pnpm-auto-update": "pnpm update",
+    "nxupdate": "nx migrate latest",
+    "nxmigrate": "nx migrate --run-migrations"
+  },
   "private": true,
   "dependencies": {
     "@nestjs/common": "^10.0.2",
@@ -16,6 +23,7 @@
     "@eslint/js": "^9.8.0",
     "@nestjs/schematics": "^10.0.1",
     "@nestjs/testing": "^10.0.2",
+    "@nx/angular": "20.0.6",
     "@nx/eslint": "20.0.6",
     "@nx/eslint-plugin": "20.0.6",
     "@nx/jest": "20.0.6",
