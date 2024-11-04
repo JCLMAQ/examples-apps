@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "start be:dev": "nx serve nestjs",
-    "start fe:dev": "nx serve course-m3 --port 4201",
+    "start fe-course-m3:dev": "nx serve course-m3 --port 4201",
+    "start fe-material-3:dev": "nx serve material-3 --port 4202",
     "pnpm-instal": "pnpm install --no-frozen-lockfile",
     "pnpm-auto-update": "pnpm update",
     "nxupdate": "nx migrate latest",
