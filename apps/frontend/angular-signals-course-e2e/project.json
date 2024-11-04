@@ -1,9 +1,0 @@
-{
-  "name": "angular-signals-course-e2e",
-  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "projectType": "application",
-  "sourceRoot": "apps/frontend/angular-signals-course-e2e/src",
-  "implicitDependencies": ["angular-signals-course"],
-  "// targets": "to see all targets run: nx show project angular-signals-course-e2e --web",
-  "targets": {}
-}
