@@ -1,0 +1,9 @@
+{
+  "name": "ngrx-signalstore-todo-e2e",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/frontend/ngrx-signalstore-todo-e2e/src",
+  "implicitDependencies": ["ngrx-signalstore-todo"],
+  "// targets": "to see all targets run: nx show project ngrx-signalstore-todo-e2e --web",
+  "targets": {}
+}
