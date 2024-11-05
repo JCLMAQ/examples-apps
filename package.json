@@ -8,6 +8,7 @@
     "start fe-material-3:dev": "nx serve material-3 --port 4202",
     "start fe-ngrx-signalstore-todo:dev": "nx serve ngrx-signalstore-todo --port 4204",
     "start fe-angular-signals-course:dev": "nx serve angular-signals-course --port 4203",
+    "start fe-dashboard:dev": "nx serve dashboard-material-layout --port 4205",
     "pnpm-instal": "pnpm install --no-frozen-lockfile",
     "pnpm-auto-update": "pnpm update",
     "nxupdate": "nx migrate latest",

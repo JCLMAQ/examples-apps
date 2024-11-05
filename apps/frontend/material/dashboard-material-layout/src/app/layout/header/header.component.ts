@@ -6,7 +6,7 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Output } from '@angul
   standalone: true,
   imports: [CommonModule],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css',
+  styleUrl: './header.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeaderComponent {

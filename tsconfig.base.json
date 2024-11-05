@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@examples-apps/material": ["libs/frontend/material/src/index.ts"]
+      "@fe/material": ["libs/frontend/material/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

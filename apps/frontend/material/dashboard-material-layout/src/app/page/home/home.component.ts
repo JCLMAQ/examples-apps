@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
+import { PageheaderComponent } from "../../layout/pageheader/pageheader.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, PageheaderComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })

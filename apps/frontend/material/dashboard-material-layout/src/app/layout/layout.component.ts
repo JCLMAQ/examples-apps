@@ -1,11 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Menu } from './menu.model';
+import { HeaderComponent } from "./header/header.component";
+import { MenuItemComponent } from "./menu-item/menu-item.component";
 
 @Component({
   selector: 'app-layout',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, HeaderComponent, MenuItemComponent],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
