@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,5 +7,19 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+
+  @Output() menuToggled = new EventEmitter<boolean>();
+
+  user= 'Enea';
+
+  // constructor(private authService: AuthService) { }
+
+  logout(): void {
+    console.log('Logged out');
+  }
+
+
+}
