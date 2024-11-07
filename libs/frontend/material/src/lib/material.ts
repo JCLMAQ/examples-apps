@@ -34,7 +34,7 @@ export const MATERIAL = [
   MatMenuModule,
   MatSidenavModule,
   MatToolbarModule,
-
+  MatIconModule,
   MatListModule,
   MatGridListModule,
   MatCardModule,
