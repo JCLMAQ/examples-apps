@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@examples-apps/material-3-lib": [
+        "libs/frontend/material-3/src/index.ts"
+      ],
       "@fe/material": ["libs/frontend/material/src/index.ts"]
     }
   },

@@ -1,0 +1,30 @@
+@use "@angular/material" as mat;
+@use "../../m3-theme.scss";
+
+
+// START - un-comment below if you want to use pre-built palettes
+// $my-app-theme: mat.define-theme(
+//   (
+//     color: (
+//       theme-type: light,
+//       primary: mat.$azure-palette,
+//       tertiary: mat.$blue-palette,
+//     ),
+//     density: (
+//       scale: 0,
+//     ),
+//   )
+// );
+
+// $my-app-dark-theme: mat.define-theme(
+//   (
+//     color: (
+//       theme-type: dark,
+//       primary: mat.$magenta-palette,
+//       tertiary: mat.$violet-palette,
+//     )
+//   )
+// );
+
+$my-app-theme: m3-theme.$light-theme;
+$my-app-dark-theme: m3-theme.$dark-theme;

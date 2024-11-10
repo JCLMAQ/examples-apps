@@ -2,7 +2,7 @@
   "name": "material-3-e2e",
   "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "apps/frontend/theming/material-3-e2e/src",
+  "sourceRoot": "apps/frontend/material/material-3-e2e/src",
   "implicitDependencies": ["material-3"],
   "// targets": "to see all targets run: nx show project material-3-e2e --web",
   "targets": {}
