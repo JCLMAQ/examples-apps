@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@examples-apps/iframe": ["libs/frontend/iframe/src/index.ts"],
       "@examples-apps/material-3-lib": [
         "libs/frontend/material-3/src/index.ts"
       ],
