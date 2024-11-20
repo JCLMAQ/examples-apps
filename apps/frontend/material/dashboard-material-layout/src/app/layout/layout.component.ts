@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { MATERIAL } from '@fe/material';
@@ -10,12 +10,11 @@ import { Menu } from './menu.model';
   selector: 'app-layout',
   standalone: true,
   imports: [
-    CommonModule,
     HeaderComponent,
     MenuItemComponent,
     RouterModule,
     ...MATERIAL
-  ],
+],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

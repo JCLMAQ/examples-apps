@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, viewChild } from '@angular/core';
 import { MatButton, MatIconButton } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSidenav } from '@angular/material/sidenav';
@@ -23,16 +23,15 @@ import { MatIcon } from '@angular/material/icon';
 })
 export class NavbarComponent {
   // SideNav Variables
-  @ViewChild(MatSidenav)
-  sidenav!: MatSidenav;
+  readonly sidenav = viewChild.required(MatSidenav);
   isMobile = true;
   isCollapsed = true;
   toggleMenu() {
     // Responsive sidebar management open/close
     if (this.isMobile) {
-      this.sidenav.toggle();
+      this.sidenav().toggle();
     } else {
-      this.sidenav.open(); // On desktop/tablet, the menu can never be fully closed
+      this.sidenav().open(); // On desktop/tablet, the menu can never be fully closed
       this.isCollapsed = !this.isCollapsed;
     }
   }

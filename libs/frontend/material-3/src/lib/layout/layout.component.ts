@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { NavbarComponent } from '../navbar/navbar.component';
@@ -8,11 +8,10 @@ import { SidenavcontainerComponent } from '../sidenavcontainer/sidenavcontainer.
   selector: 'lib-layout',
   standalone: true,
   imports: [
-    CommonModule,
     NavbarComponent,
     SidenavcontainerComponent,
-    MatIconModule,
-  ],
+    MatIconModule
+],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.scss',
 })
