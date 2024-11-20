@@ -1,4 +1,4 @@
 import { Route } from '@angular/router';
-import { LayoutComponent } from './layout/layout.component';
 
-export const layoutRoutes: Route[] = [{ path: '', component: LayoutComponent }];
+
+export const layoutRoutes: Route[] = [{ path: '', loadComponent: () => import('./layout/layout.component').then(m => m.LayoutComponent) }];

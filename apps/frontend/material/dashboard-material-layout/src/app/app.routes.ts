@@ -1,7 +1,7 @@
 import { Route } from '@angular/router';
-import { LayoutComponent } from './layout/layout.component';
-import { HomeComponent } from './page/home/home.component';
-import { SalesComponent } from './page/sales/sales.component';
+
+
+
 
 export const appRoutes: Route[] = [
   {
@@ -11,15 +11,15 @@ export const appRoutes: Route[] = [
   },
   {
     path: '',
-    component: LayoutComponent,
+    loadComponent: () => import('./layout/layout.component').then(m => m.LayoutComponent),
     children: [
       {
         path: 'home',
-        component: HomeComponent
+        loadComponent: () => import('./page/home/home.component').then(m => m.HomeComponent)
       },
       {
         path: 'sales',
-        component: SalesComponent
+        loadComponent: () => import('./page/sales/sales.component').then(m => m.SalesComponent)
       }
     ]
   }
