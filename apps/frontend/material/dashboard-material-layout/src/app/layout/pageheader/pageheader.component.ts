@@ -1,5 +1,5 @@
-import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+
+import { Component, input } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { MATERIAL } from '@fe/material';
 
@@ -7,15 +7,14 @@ import { MATERIAL } from '@fe/material';
   selector: 'app-page-header',
   standalone: true,
   imports: [
-    CommonModule,
-      RouterModule,
-      ...MATERIAL
-        ],
+    RouterModule,
+    ...MATERIAL
+],
   templateUrl: './pageheader.component.html',
   styleUrl: './pageheader.component.scss',
 })
 export class PageheaderComponent {
 
-  @Input() icon?: string;
+  readonly icon = input<string>();
 
 }

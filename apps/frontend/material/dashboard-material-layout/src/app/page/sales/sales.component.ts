@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component } from '@angular/core';
 import { MATERIAL } from '@fe/material';
 import { PageheaderComponent } from "../../layout/pageheader/pageheader.component";
@@ -7,10 +7,9 @@ import { PageheaderComponent } from "../../layout/pageheader/pageheader.componen
   selector: 'app-sales',
   standalone: true,
   imports: [
-    CommonModule,
     PageheaderComponent,
     ...MATERIAL
-  ],
+],
   templateUrl: './sales.component.html',
   styleUrl: './sales.component.scss',
 })

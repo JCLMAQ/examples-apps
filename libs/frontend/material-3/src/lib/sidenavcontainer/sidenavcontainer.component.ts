@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MainContentComponent } from '../content/maincontent.component';
 import { SidebarComponent } from '../sidebar/sidebar.component';
@@ -6,7 +6,7 @@ import { SidebarComponent } from '../sidebar/sidebar.component';
 @Component({
   selector: 'lib-sidenavcontainer',
   standalone: true,
-  imports: [CommonModule, SidebarComponent, MainContentComponent],
+  imports: [SidebarComponent, MainContentComponent],
   templateUrl: './sidenavcontainer.component.html',
   styleUrl: './sidenavcontainer.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component } from '@angular/core';
 import { MATERIAL } from '@fe/material';
 import { PageheaderComponent } from "../../layout/pageheader/pageheader.component";
@@ -6,7 +6,7 @@ import { PageheaderComponent } from "../../layout/pageheader/pageheader.componen
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, PageheaderComponent, ...MATERIAL],
+  imports: [PageheaderComponent, ...MATERIAL],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
