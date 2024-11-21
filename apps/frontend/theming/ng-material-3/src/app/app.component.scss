@@ -1,0 +1,33 @@
+main {
+  padding: 1rem;
+}
+
+button {
+  margin: 0 1rem 1rem 0;
+}
+
+section {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.form-fields {
+    display: flex;
+    flex-direction: column;
+}
+
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+  background-size: cover;
+}
+
+@media (max-width: 640px) {
+  .example-card {
+    max-width: 300px;
+  }
+}
