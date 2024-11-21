@@ -7,6 +7,7 @@
     "start fe-course-m3:dev": "nx serve course-m3 --port 4201",
     "start fe-material-3:dev": "nx serve material-3 --port 4202",
     "start fe-ngrx-signalstore-todo:dev": "nx serve ngrx-signalstore-todo --port 4204",
+    "start fe-angular-iframe:dev": "nx serve iframe-app --port 4204",
     "start fe-angular-signals-course:dev": "nx serve angular-signals-course --port 4203",
     "start fe-dashboard:dev": "nx serve dashboard-material-layout --port 4205",
     "start fe-a-m-theme-switcher:dev": "nx serve a-m-theme-switcher --port 4206",
