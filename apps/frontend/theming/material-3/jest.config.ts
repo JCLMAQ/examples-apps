@@ -2,7 +2,7 @@ export default {
   displayName: 'material-3',
   preset: '../../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-  coverageDirectory: '../../../../coverage/apps/frontend/material/material-3',
+  coverageDirectory: '../../../../coverage/apps/frontend/theming/material-3',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',
