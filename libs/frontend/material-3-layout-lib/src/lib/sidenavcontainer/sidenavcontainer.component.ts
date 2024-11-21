@@ -1,4 +1,3 @@
-
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MainContentComponent } from '../content/maincontent.component';
 import { SidebarComponent } from '../sidebar/sidebar.component';

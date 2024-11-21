@@ -12,6 +12,7 @@
     "start fe-dashboard:dev": "nx serve dashboard-material-layout --port 4205",
     "start fe-a-m-theme-switcher:dev": "nx serve a-m-theme-switcher --port 4206",
     "start fe-ng-material-3:dev": "nx serve ng-material-3 --port 4207",
+    "start fe-material-3-layout:dev": "nx serve material-3-layout --port 4208",
     "pnpm-instal": "pnpm install --no-frozen-lockfile",
     "pnpm-auto-update": "pnpm update",
     "nxupdate": "nx migrate latest",
