@@ -1,4 +1,3 @@
-/* You can add global styles to this file, and also import other style files */
 @use "@angular/material" as mat;
 @use "./styles/themes/all" as themes;
 @use "./styles/themes/custom-theme";
@@ -39,10 +38,38 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+// Customizing the button shape
+
 .button-rounded {
   --border-radius: 16px;
   --mdc-text-button-container-shape: var(--border-radius);
   --mdc-protected-button-container-shape: var(--border-radius);
   --mdc-outlined-button-container-shape: var(--border-radius);
   --mdc-filled-button-container-shape: var(--border-radius);
+}
+
+// Customizing the button appearance using overrides API
+.overrides-example {
+  button {
+    @include mat.button-overrides(
+      (
+        filled-container-color: #00ff00,
+        filled-container-height: 64px,
+        filled-container-shape: 32px,
+        filled-label-text-color: orange,
+        filled-ripple-color: #ff0000,
+        outlined-outline-color: #0000ff
+      )
+    );
+  }
+}
+
+// Adding color variants to the button using button-color API
+// Primary is the default color variant, so we don't need to specify it
+$color-variants: (secondary, tertiary);
+
+@each $variant in $color-variants {
+  .mat-#{$variant} {
+    @include mat.button-color(themes.$my-app-theme, $color-variant: $variant);
+  }
 }
