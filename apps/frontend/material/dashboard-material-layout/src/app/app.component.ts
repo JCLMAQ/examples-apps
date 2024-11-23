@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, effect, signal } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { MATERIAL } from '@fe/material';
 
@@ -14,4 +14,13 @@ import { MATERIAL } from '@fe/material';
 })
 export class AppComponent {
   title = 'dashboard-material-layout';
+  events: string[] = [];
+  opened: boolean | undefined;
+
+  darkTheme = signal(false);
+  constructor() {
+    effect(() => {
+      document.body.classList.toggle('dark', this.darkTheme());
+    });
+  }
 }

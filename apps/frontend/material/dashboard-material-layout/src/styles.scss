@@ -1,15 +1,165 @@
-@use '@angular/material' as mat;
-@use "./styles/themes/all" as themes;
+// @use '@angular/material' as mat;
+// @use "./styles/themes/all" as themes;
 
-@include mat.core();
+// @include mat.core();
 
-$my-theme: mat.define-theme((
- color: (
-    theme-type: light,
-    primary: mat.$violet-palette,
-  ),
-));
+// $my-theme: mat.define-theme((
+//  color: (
+//     theme-type: light dark,
+//     primary: mat.$violet-palette,
+//   ),
+// ));
+
+// html {
+//   @include mat.all-component-themes($my-theme);
+// }
+
+
+@use "sass:map";
+@use "@angular/material" as mat;
 
 html {
-  @include mat.all-component-themes($my-theme);
+  color-scheme: light dark;
+  @include mat.theme((
+    color: mat.$violet-palette,
+    typography: Roboto,
+    density: 0
+  ));
+}
+
+body {
+  background: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+}
+
+
+// body {
+//   padding: 20px;
+//   font-family: "DM Mono", monospace;
+//   font-weight: 400;
+//   font-style: normal;
+// }
+
+
+// Emit Angular Material core styles.
+@include mat.core();
+
+// Base theme configuration for our M3 theme.
+$m3-base-config: (
+  color: (
+    primary: mat.$green-palette,
+    tertiary: mat.$blue-palette
+  ),
+);
+
+// Our M3 light theme.
+$light-theme: mat.define-theme($m3-base-config);
+
+// Our M3 dark theme.
+$dark-theme: mat.define-theme(
+  map.set($m3-base-config, color, theme-type, dark)
+);
+
+// Emit default theme styles.
+html {
+  @include mat.autocomplete-theme($light-theme);
+  @include mat.badge-theme($light-theme);
+  @include mat.bottom-sheet-theme($light-theme);
+  @include mat.button-theme($light-theme);
+  @include mat.button-toggle-theme($light-theme);
+  @include mat.card-theme($light-theme);
+  @include mat.checkbox-theme($light-theme);
+  @include mat.chips-theme($light-theme);
+  @include mat.core-theme($light-theme);
+  @include mat.datepicker-theme($light-theme);
+  @include mat.dialog-theme($light-theme);
+  @include mat.divider-theme($light-theme);
+  @include mat.expansion-theme($light-theme);
+  @include mat.fab-theme($light-theme);
+  @include mat.form-field-theme($light-theme);
+  @include mat.grid-list-theme($light-theme);
+  @include mat.icon-button-theme($light-theme);
+  @include mat.icon-theme($light-theme);
+  @include mat.input-theme($light-theme);
+  @include mat.list-theme($light-theme);
+  @include mat.menu-theme($light-theme);
+  @include mat.paginator-theme($light-theme);
+  @include mat.progress-bar-theme($light-theme);
+  @include mat.progress-spinner-theme($light-theme);
+  @include mat.radio-theme($light-theme);
+  @include mat.select-theme($light-theme);
+  @include mat.sidenav-theme($light-theme);
+  @include mat.slide-toggle-theme($light-theme);
+  @include mat.slider-theme($light-theme);
+  @include mat.snack-bar-theme($light-theme);
+  @include mat.sort-theme($light-theme);
+  @include mat.stepper-theme($light-theme);
+  @include mat.table-theme($light-theme);
+  @include mat.tabs-theme($light-theme);
+  @include mat.toolbar-theme($light-theme);
+  @include mat.tooltip-theme($light-theme);
+  @include mat.tree-theme($light-theme);
+  // @include mat.sidenav-overrides($light-theme);
+  // @include mat.sidenav-overrides((
+  //   container-background-color: orange,
+  //   container-text-color: red,
+  // ));
+
+}
+
+// Emit dark theme styles.
+.dark {
+  background: black;
+  color: white;
+
+  @include mat.autocomplete-color($dark-theme);
+  @include mat.badge-color($dark-theme);
+  @include mat.bottom-sheet-color($dark-theme);
+  @include mat.button-color($dark-theme);
+  @include mat.button-toggle-color($dark-theme);
+  @include mat.card-color($dark-theme);
+  @include mat.checkbox-color($dark-theme);
+  @include mat.chips-color($dark-theme);
+  @include mat.core-color($dark-theme);
+  @include mat.datepicker-color($dark-theme);
+  @include mat.dialog-color($dark-theme);
+  @include mat.divider-color($dark-theme);
+  @include mat.expansion-color($dark-theme);
+  @include mat.fab-color($dark-theme);
+  @include mat.form-field-color($dark-theme);
+  @include mat.grid-list-color($dark-theme);
+  @include mat.icon-button-color($dark-theme);
+  @include mat.icon-color($dark-theme);
+  @include mat.input-color($dark-theme);
+  @include mat.list-color($dark-theme);
+  @include mat.menu-color($dark-theme);
+  @include mat.paginator-color($dark-theme);
+  @include mat.progress-bar-color($dark-theme);
+  @include mat.progress-spinner-color($dark-theme);
+  @include mat.radio-color($dark-theme);
+  @include mat.select-color($dark-theme);
+  @include mat.sidenav-color($dark-theme);
+  @include mat.slide-toggle-color($dark-theme);
+  @include mat.slider-color($dark-theme);
+  @include mat.snack-bar-color($dark-theme);
+  @include mat.sort-color($dark-theme);
+  @include mat.stepper-color($dark-theme);
+  @include mat.table-color($dark-theme);
+  @include mat.tabs-color($dark-theme);
+  @include mat.toolbar-color($dark-theme);
+  @include mat.tooltip-color($dark-theme);
+  @include mat.tree-color($dark-theme);
+
+  // @include mat.sidenav-overrides($dark-theme);
+  @include mat.sidenav-overrides((
+    container-background-color: blue,
+    container-text-color: orange,
+  ));
+
+}
+
+
+mat-sidenav {
+  // Override the colors to create a dark sidenav.
+  @include mat.all-component-colors($light-theme);
 }

@@ -1,11 +1,13 @@
 import { Component, effect, signal } from '@angular/core';
+// import { MatCheckbox } from '@angular/material/checkbox';
 import { RouterModule } from '@angular/router';
 import { MATERIAL } from '@fe/material';
 
 @Component({
   standalone: true,
   imports: [RouterModule,
-    MATERIAL
+   ...MATERIAL,
+    // MatCheckbox
   ],
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -13,6 +15,9 @@ import { MATERIAL } from '@fe/material';
 })
 export class AppComponent {
   title = 'material-3';
+  events: string[] = [];
+  opened: boolean | undefined;
+
   darkTheme = signal(false);
 
   DENSITY_LEVELS = ['maximum', 0, '-1', '-2', '-3', '-4', 'minimum'];
