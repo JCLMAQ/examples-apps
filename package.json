@@ -4,6 +4,7 @@
   "license": "MIT",
   "scripts": {
     "start be:dev": "nx serve nestjs",
+    "start withdarkmode-m3:dev": "nx serve withdarkmode-m3 --port 4209",
     "start fe-course-m3:dev": "nx serve course-m3 --port 4201",
     "start fe-material-3:dev": "nx serve material-3 --port 4202",
     "start fe-ngrx-signalstore-todo:dev": "nx serve ngrx-signalstore-todo --port 4204",
