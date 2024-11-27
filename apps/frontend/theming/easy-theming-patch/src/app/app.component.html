@@ -1,0 +1,26 @@
+<mat-toolbar>
+  Easy Material 3 Theming
+  <button
+    mat-flat-button
+    (click)="themeSelectorOpen.set(!themeSelectorOpen())"
+  >
+    Theme
+    <mat-icon>format_color_fill</mat-icon>
+  </button>
+</mat-toolbar>
+<mat-sidenav-container>
+  <mat-sidenav class="component-selector" [opened]="true" mode="side">
+    <app-main-menu />
+  </mat-sidenav>
+  <mat-sidenav
+    class="theme-selector"
+    [(opened)]="themeSelectorOpen"
+    mode="side"
+    position="end"
+  >
+    <app-theme-selector />
+  </mat-sidenav>
+  <div class="container">
+    <router-outlet />
+  </div>
+</mat-sidenav-container>

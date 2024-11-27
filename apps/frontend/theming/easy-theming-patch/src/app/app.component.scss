@@ -1,0 +1,26 @@
+
+.container {
+  padding: 24px;
+}
+
+mat-toolbar {
+  justify-content: space-between;
+}
+
+mat-sidenav-container {
+  height: calc(100vh - 64px);
+}
+
+.component-selector {
+  width: 200px;
+  height: inherit;
+  background: rgba(0,0,0,0.05);
+  --mat-sidenav-container-divider-color: var(--primary-light);
+}
+
+.theme-selector {
+  width: 300px;
+  height: inherit;
+  background: rgba(0,0,0,0.05);
+  --mat-sidenav-container-divider-color: var(--primary-light);
+}
