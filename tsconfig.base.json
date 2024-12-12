@@ -15,12 +15,14 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@fe/theming": ["libs/frontend/theming/src/index.ts"],
       "@fe/iframe": ["libs/frontend/iframe/src/index.ts"],
+      "@fe/material": ["libs/frontend/material/src/index.ts"],
       "@fe/material-3-layout-lib": [
         "libs/frontend/material-3-layout-lib/src/index.ts"
       ],
-      "@fe/utilities": ["libs/frontend/utilities/src/index.ts"],
-      "@fe/material": ["libs/frontend/material/src/index.ts"]
+      "@fe/translate": ["libs/frontend/translate/src/index.ts"],
+      "@fe/utilities": ["libs/frontend/utilities/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
