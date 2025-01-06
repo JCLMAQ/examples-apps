@@ -4,7 +4,9 @@ import { FormGroup } from '@angular/forms';
 // 1. Define the function to be used as a decorator
 // NOTE: In this case, it is a factory decorator because we want to
 // pass input arguments here
-export function ValidateForm(propertyName: string, cb?: Function) {
+
+export function ValidateForm(propertyName: string, cb?: (cmp: any) => void) {
+  // export function ValidateForm(propertyName: string, cb?: Function) {
   return (target: any, methodName: string, descriptor: PropertyDescriptor) => {
     // 2. Get access to the original method
     const method = descriptor.value;
